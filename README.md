@@ -6,6 +6,12 @@ analysis.py
 util.py
     公共方法类
 
+AnalyseEthernet.py
+	解析链路层协议信息
+
+AnalyseInternet.py
+	解析网络层协议信息
+
 TransLayerAnalyse.py
 	解析传输层协议信息
 
