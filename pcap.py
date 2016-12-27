@@ -25,6 +25,3 @@ class AnalysePcap:
 if __name__ == '__main__':
 <<<<<<< HEAD
 	print 'Analysepcap.py'	
-=======
-	print 'Analysepcap.py'	
->>>>>>> abf606cbe29940371515938a6276e12a6a829aff
