@@ -20,4 +20,7 @@ class AnalysePhysical:
 		pcap_header['Snaplen'] = packet[16:20]
 		pcap_header['Linktype'] = packet[20:24]
 		self.packet_info['Pcapheader'] = pcap_header
-		return packet[16:]                   #返回文件数据部分		
+		return packet[16:]                   #返回文件数据部分
+
+if __name__ == '__main__':
+	print 'Analysepcao.py'	

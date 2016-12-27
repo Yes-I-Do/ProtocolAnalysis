@@ -17,3 +17,6 @@ class AnalyseEthernet:
 		ethernetlayer['Ethernettype'] = packet[12:14]   #链路层协议类型
 		self.packet_info['Ethernetlayer'] = ethernetlayer
 		return packet[14:]                   #返回TCP包数据部分
+
+if __name__ == '__main__':
+	print 'AnalyseEthernet.py'

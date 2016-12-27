@@ -6,6 +6,12 @@ analysis.py
 util.py
     公共方法类
 
+pcap.py
+	解析pca包头部信息
+
+AnalysePhysical.py
+	解析物理层协议信息，并返回包长度
+	
 AnalyseEthernet.py
 	解析链路层协议信息
 

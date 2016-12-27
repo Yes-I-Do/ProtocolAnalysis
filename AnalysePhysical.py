@@ -20,3 +20,6 @@ class AnalysePhysical:
 		self.length = struct.unpack('I',pcap_packet_header['len'])[0]
 		self.packet_info['Physicallayer'] = physicallayer
 		return packet[16:]                   #返回物理层包数据部分
+	
+if __name__ == '__main__':
+	print 'Analysephysical.py'

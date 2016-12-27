@@ -25,3 +25,6 @@ class AnalyseInternet:
 		internetlayer['IPdaddr'] = packet[16:20]  #目的地址
 		self.packet_info['Internetlayer'] = internetlayer
 		return packet[20:]                   #返回TCP包数据部分
+	
+if __name__ == '__main__':
+	print 'AnalyseInternet.py'	
