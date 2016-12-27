@@ -23,4 +23,8 @@ class AnalysePcap:
 		return packet[16:]                   #返回文件数据部分
 
 if __name__ == '__main__':
+<<<<<<< HEAD
 	print 'Analysepcap.py'	
+=======
+	print 'Analysepcap.py'	
+>>>>>>> abf606cbe29940371515938a6276e12a6a829aff
