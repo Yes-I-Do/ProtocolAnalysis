@@ -4,7 +4,7 @@
 import struct
 from util import hex2dec
 
-class AnalysePhysical:
+class AnalysePcap:
 	def __init__(self):
 		print "__init__"
 		self.packet_info = {}
@@ -23,4 +23,4 @@ class AnalysePhysical:
 		return packet[16:]                   #返回文件数据部分
 
 if __name__ == '__main__':
-	print 'Analysepcao.py'	
+	print 'Analysepcap.py'	
