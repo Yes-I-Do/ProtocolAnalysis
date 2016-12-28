@@ -7,7 +7,7 @@ from util import hex2dec
 class AnalyseInternet:
 	def __init__(self):
 		print "__init__"
-		self.packet_info = {}
+		#self.packet_info = {}
 	
 	#解析网络层协议
 	#ipv4 header
@@ -23,8 +23,8 @@ class AnalyseInternet:
 		internetlayer['IPcheck'] = packet[10:12]  #头部校验和
 		internetlayer['IPsaddr'] = packet[12:16]  #源地址
 		internetlayer['IPdaddr'] = packet[16:20]  #目的地址
-		self.packet_info['Internetlayer'] = internetlayer
-		return packet[20:]                   #返回TCP包数据部分
+		#self.packet_info['Internetlayer'] = internetlayer
+		return internetlayer,packet[20:]                   #返回IP包头，IP包数据部分
 	
 if __name__ == '__main__':
 	print 'AnalyseInternet.py'	
