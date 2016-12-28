@@ -20,7 +20,7 @@ class AnalysePcap:
 		pcap_header['Snaplen'] = packet[16:20]
 		pcap_header['Linktype'] = packet[20:24]
 		#self.packet_info['Pcapheader'] = pcap_header
-		return pcap_header,packet[16:]                   #返回文件头部，文件数据部分
+		return pcap_header,packet[24:]                   #返回文件头部，文件数据部分
 
 if __name__ == '__main__':
 	print 'Analysepcap.py'	

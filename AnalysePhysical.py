@@ -17,10 +17,11 @@ class AnalysePhysical:
 		physicallayer['MicroTime'] = packet[4:8]    #时间戳
 		physicallayer['Caplen'] = packet[8:12]  #包长度
 		physicallayer['Len'] = packet[12:16]    #包长度
-		packetlength = struct.unpack('I',pcap_packet_header['len'])[0]
-		#self.length = struct.unpack('I',pcap_packet_header['len'])[0]
+		packetlength = struct.unpack('I',physicallayer['Len'])[0]
+		#print physicallayer['Len'],packetlength
+		#self.length = struct.unpack('I',physicallayer['Len'])[0]
 		#self.packet_info['Physicallayer'] = physicallayer
-		return physicallayer,packet[16:packetlength],packet[packetlength:]                   #返回物理层包头，物理层包数据部分,剩余文件内容
+		return physicallayer,packet[16:packetlength],packet[16+packetlength:],packetlength                   #返回物理层包头，物理层包数据部分,剩余文件内容,包长
 	
 if __name__ == '__main__':
 	print 'Analysephysical.py'
