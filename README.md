@@ -23,3 +23,5 @@ TransLayerAnalyse.py
 
 AppLayerAnalyse.py
 	解析应用层协议信息
+
+进制及/x问题
