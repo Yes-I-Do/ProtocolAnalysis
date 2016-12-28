@@ -17,7 +17,8 @@ class AnalysePhysical:
 		physicallayer['MicroTime'] = packet[4:8]    #时间戳
 		physicallayer['Caplen'] = packet[8:12]  #包长度
 		physicallayer['Len'] = packet[12:16]    #包长度
-		packetlength = struct.unpack('I',physicallayer['Len'])[0]
+		packetlength = packet[12]+packet[13]*256+packet[14]*256*256+packet[15]*256*256*256	#对应于修改输入转化为一字节的无符号数
+		#packetlength = struct.unpack('I',physicallayer['Len'])[0]
 		#print physicallayer['Len'],packetlength
 		#self.length = struct.unpack('I',physicallayer['Len'])[0]
 		#self.packet_info['Physicallayer'] = physicallayer
