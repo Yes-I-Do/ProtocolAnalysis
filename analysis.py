@@ -29,9 +29,10 @@ class AnalysePacket:
 if __name__ == '__main__':
 	fpcap = open('target.cap','rb')
 	string_data = fpcap.read()
-	n = len(string_data)	
-	#print struct.unpack('13178979B',string_data)
-	string_data = struct.unpack('13178979B',string_data) 	#修改，试图读入转换为一字节的无符号数，但这里需要输入具体数字，需修改
+	n = len(string_data)
+	#print repr(string_data)
+	print struct.unpack('13178979B',string_data)
+	#string_data = struct.unpack('13178979B',string_data) 	#修改，试图读入转换为一字节的无符号数，但这里需要输入具体数字，需修改
 	
 	pcap_header,string_data = AnalysePcap().Unpack_pcap_header(string_data)
 	#print n
