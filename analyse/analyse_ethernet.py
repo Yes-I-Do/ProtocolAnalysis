@@ -2,7 +2,9 @@
 #分析链路层协议内容：Ethernet
 
 import struct
-from util import hex2dec
+import sys
+sys.path.append('..')
+from util.util import hex2dec
 
 class AnalyseEthernet:
 	def __init__(self):
@@ -12,11 +14,11 @@ class AnalyseEthernet:
 	#解析链路层协议
 	def unpack_ethernet_header(self,packet):
 		ethernet_layer = {}
-		ethernet_layerlayer['SrcMac'] = packet[0:6] #源Mac
+		ethernet_layer['SrcMac'] = packet[0:6] #源Mac
 		ethernet_layer['DesMac'] = packet[6:12] #目的Mac
 		ethernet_layer['Ethernettype'] = packet[12:14]   #链路层协议类型
 		#self.packet_info['Ethernetlayer'] = ethernetlayer
 		return ethernet_layer,packet[14:]                   #返回链路层包头，链路层包数据部分
 
 if __name__ == '__main__':
-	print 'analyse_ethernet.py'
+	print 'AnalyseEthernet.py'

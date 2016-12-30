@@ -2,7 +2,9 @@
 #分析网络层协议内容：Internet Protocol
 
 import struct
-from util import hex2dec
+import sys
+sys.path.append('..')
+from util.util import hex2dec
 
 class AnalyseInternet:
 	def __init__(self):
@@ -27,4 +29,4 @@ class AnalyseInternet:
 		return internet_layer,packet[20:]                   #返回IP包头，IP包数据部分
 	
 if __name__ == '__main__':
-	print 'analyseinternet.py'	
+	print 'AnalyseInternet.py'	

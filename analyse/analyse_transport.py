@@ -1,14 +1,16 @@
 # -*- coding:utf-8 -*-
 
-from util import hex2dec
+import sys
+sys.path.append('..')
+from util.util import hex2dec
 
 # 解析传输层协议
-class TransLayerAnalyse:
+class AnalyseTransport:
 	def __init__(self):
 		print '__init__'
 
 	# 解析TCP包头
-	def UnpackTcpHeader(self,packet):
+	def unpack_tcp_header(self,packet):
 		print "unpack tcp header"
 		translayer = {} #传输层信息
 		translayer['Type'] = 'tcp'
@@ -21,7 +23,7 @@ class TransLayerAnalyse:
 		return translayer,packet[header_len*2:]          #返回TCP包头解析结果，TCP包数据部分
 
 	# 解析UDP包头
-	def UnpackUdpHeader(self,packet):
+	def unpack_udp_header(self,packet):
 		print "unpack udp header"
 		translayer['Type'] = 'udp'
 		translayer['UdpSrcPort'] = hex2dec (packet[0:4])   #源端口 

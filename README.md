@@ -3,25 +3,34 @@
 analysis.py
     对捕包进行协议分析
 
-util.py
-    公共方法类
+util包
+	公共方法类包
 
-pcap.py
-	解析pca包头部信息
+	-- util.py
+    	公共方法类
 
-AnalysePhysical.py
-	解析物理层协议信息，并返回包长度
-	
-AnalyseEthernet.py
-	解析链路层协议信息
 
-AnalyseInternet.py
-	解析网络层协议信息
+analyse包
+	分析代码包
 
-TransLayerAnalyse.py
-	解析传输层协议信息
+	-- analyse_pcap.py
+		解析pcap文件信息
 
-AppLayerAnalyse.py
-	解析应用层协议信息
+	-- analyse_physical.py
+		解析原始数据包，得到时间戳，总包长信息
 
-进制及/x问题，暂时unpack("B",...)
+	-- analyse_ethernet.py
+		解析链路层协议信息
+
+	-- analyse_internet.py
+		解析网络层协议信息
+
+	-- analyse_transport.py
+		解析传输层协议信息
+
+	-- analyse_application.py
+		解析应用层协议信息
+
+
+未明确问题：
+	进制及/x问题，暂时unpack("B",...)

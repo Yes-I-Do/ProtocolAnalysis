@@ -1,14 +1,16 @@
 # -*- coding:utf-8 -*-
 
-from util import hex2dec
+import sys
+sys.path.append('..')
+from util.util import hex2dec
 
 # 解析应用层协议
-class AppLayerAnalyse:
+class AnalyseApplication:
 	def __init__(self):
 		print '__init__'
 
 	# 解析IEC104协议
-	def UnpackIec104Header(self,packet):
+	def unpack_iec104_header(self,packet):
 		print "unpack iec104 header"
 		if not hex2dec (packet[0:2]) == 104:
 			print "not iec104"
